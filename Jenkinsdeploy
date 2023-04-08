@@ -20,7 +20,7 @@ stage('nexus'){
 //Tomact
 stage('tomacat'){
     sshagent(['dbf50bca-569c-4bf2-825b-b2351ac7a0e6']){
-    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ash@3.110.157.203:/opt/apache-tomcat-9.0.73/webapps/"
+    sh "scp -rvp target/maven-web-application.war ash@3.110.157.203:/opt/apache-tomcat-9.0.73/webapps/"
 }
 }
 }
