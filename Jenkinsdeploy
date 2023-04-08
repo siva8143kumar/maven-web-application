@@ -1,5 +1,6 @@
 node{
 def fb = tool name: "3.9.1"
+echo " current build number is" ---> $(env.BUILD_NUMBER)
 //checkout stage
 stage('git checkout'){
 git credentialsId: '74fa83ad-6ba1-4a6b-8fc9-f1c8d26f9a4a', url: 'https://github.com/siva8143kumar/maven-web-application.git'
